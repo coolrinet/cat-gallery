@@ -5,4 +5,4 @@ type Filter = {
   type: FilterType;
 };
 
-export type { Filter };
+export type { Filter, FilterType };

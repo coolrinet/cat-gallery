@@ -1,4 +1,5 @@
 import Header from '@/components/Header';
+import { CurrentFilterProvider } from '@/providers/CurrentFilterProvider';
 import type { Filter } from '@/types';
 
 const filters: Filter[] = [
@@ -14,9 +15,9 @@ const filters: Filter[] = [
 
 function App() {
   return (
-    <>
+    <CurrentFilterProvider>
       <Header filters={filters} />
-    </>
+    </CurrentFilterProvider>
   );
 }
 
