@@ -8,6 +8,12 @@ importers:
 
   .:
     dependencies:
+      '@a1rth/css-normalize':
+        specifier: ^1.2.4
+        version: 1.2.4
+      ky:
+        specifier: ^2.0.0
+        version: 2.0.0
       react:
         specifier: ^19.2.4
         version: 19.2.4
@@ -59,6 +65,9 @@ importers:
         version: 8.0.7(@types/node@24.12.2)
 
 packages:
+
+  '@a1rth/css-normalize@1.2.4':
+    resolution: {integrity: sha512-yX4zrit1XbGAF33qWRd3T0jCEBUjus9ojsoxW1f3SKVIpCpc3mCSyojWuo66373cu/EDVchzK3O5mzinfq7JAQ==}
 
   '@babel/code-frame@7.29.0':
     resolution: {integrity: sha512-9NhCeYjq9+3uxgdtp20LSiJXJvN0FeCtNGpJxuMFZ1Kv3cWUNb6DOhJwUvcVCzKGR66cw4njwM6hrJLqgOwbcw==}
@@ -693,6 +702,10 @@ packages:
   keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
 
+  ky@2.0.0:
+    resolution: {integrity: sha512-KzI4Vz5AbZFAUFYGx28PCSfFWUo6/qj9Br/P6KRwDieE1xfdz0tIONepJcLw/1xLocN13GgvfJGasa+pfSkbHg==}
+    engines: {node: '>=22'}
+
   levn@0.4.1:
     resolution: {integrity: sha512-+bT2uH4E5LGE7h/n3evcS/sQlJXCpIp6ym8OWJ5eV6+67Dsql/LaaT7qJBAt2rzfoa/5QBGBhxDix1dMt2kQKQ==}
     engines: {node: '>= 0.8.0'}
@@ -1010,6 +1023,8 @@ packages:
     resolution: {integrity: sha512-rftlrkhHZOcjDwkGlnUtZZkvaPHCsDATp4pGpuOOMDaTdDDXF91wuVDJoWoPsKX/3YPQ5fHuF3STjcYyKr+Qhg==}
 
 snapshots:
+
+  '@a1rth/css-normalize@1.2.4': {}
 
   '@babel/code-frame@7.29.0':
     dependencies:
@@ -1637,6 +1652,8 @@ snapshots:
   keyv@4.5.4:
     dependencies:
       json-buffer: 3.0.1
+
+  ky@2.0.0: {}
 
   levn@0.4.1:
     dependencies:

@@ -1,0 +1,57 @@
+@import '@a1rth/css-normalize';
+
+:root {
+  --color-blue: #2196f3;
+  --color-dark-blue: #1e88e5;
+  --color-white: #ffffff;
+  --color-light-red: #f24e1e;
+  --color-red: #ff3a00;
+
+  --gradient-highlight: linear-gradient(
+    to top,
+    rgba(255 255 255 0) 0%,
+    var(--color-white) 58%
+  );
+
+  --font-family-base: 'Roboto', sans-serif;
+
+  --container-width: 1320px;
+  --container-padding-x: 15px;
+
+  --transition-duration: 0.2s;
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.018em;
+}
+
+a {
+  color: inherit;
+}
+
+a[class] {
+  text-decoration: none;
+}
+
+.container {
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
