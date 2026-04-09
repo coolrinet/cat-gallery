@@ -1,0 +1,36 @@
+.cat-card {
+  position: relative;
+
+  background-color: var(--color-white);
+
+  width: 100%;
+  max-width: 225px;
+
+  transition-duration: var(--transition-duration);
+}
+
+.cat-card::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+
+  background: var(--gradient-highlight);
+
+  opacity: 0;
+  transition-duration: inherit;
+}
+
+.cat-card:hover {
+  scale: 1.14;
+  box-shadow: 0 6px 5px rgba(0, 0, 0, 0.24), 0 9px 18px rgba(0, 0, 0, 0.18);
+}
+
+.cat-card:hover::after {
+  opacity: 1;
+}
+
+.cat-card__image {
+  aspect-ratio: 1 / 1;
+}

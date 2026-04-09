@@ -8,15 +8,15 @@
   --color-red: #ff3a00;
 
   --gradient-highlight: linear-gradient(
-    to top,
-    rgba(255 255 255 0) 0%,
-    var(--color-white) 58%
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    var(--color-white) 95%
   );
 
   --font-family-base: 'Roboto', sans-serif;
 
   --container-width: 1320px;
-  --container-padding-x: 15px;
+  --container-padding-x: 20px;
 
   --transition-duration: 0.2s;
 }
