@@ -22,7 +22,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <CurrentFilterProvider>
         <Header filters={filters} />
-        <div className='container'>
+        <div className='container' style={{ marginTop: '64px' }}>
           <Cats />
         </div>
       </CurrentFilterProvider>
