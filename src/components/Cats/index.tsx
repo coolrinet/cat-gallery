@@ -17,7 +17,7 @@ function Cats() {
   const cats = data?.pages.flat() || [];
 
   return isLoading ? (
-    <p>Идет загрузка данных...</p>
+    <p style={{ paddingTop: '52px' }}>Идет загрузка данных...</p>
   ) : currentFilter === 'all' ? (
     <InfiniteScroll
       className='cats'
@@ -37,7 +37,7 @@ function Cats() {
       ))}
     </div>
   ) : (
-    <p>Тут нечего показывать :(</p>
+    <p style={{ paddingTop: '52px' }}>Тут нечего показывать :(</p>
   );
 }
 
