@@ -20,7 +20,7 @@ function Cats() {
     <p>Идет загрузка данных...</p>
   ) : currentFilter === 'all' ? (
     <InfiniteScroll
-      className='container cats'
+      className='cats'
       dataLength={cats.length}
       hasMore={hasNextPage}
       loader={<p>Идет поиск новых котят...</p>}
@@ -31,7 +31,7 @@ function Cats() {
       ))}
     </InfiniteScroll>
   ) : favoriteCats && favoriteCats.length ? (
-    <div className='container cats'>
+    <div className='cats'>
       {favoriteCats.map(cat => (
         <CatCard catInfo={cat} key={cat.id} />
       ))}

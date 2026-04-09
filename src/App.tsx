@@ -22,7 +22,9 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <CurrentFilterProvider>
         <Header filters={filters} />
-        <Cats />
+        <div className='container'>
+          <Cats />
+        </div>
       </CurrentFilterProvider>
     </QueryClientProvider>
   );
