@@ -5,4 +5,9 @@ type Filter = {
   type: FilterType;
 };
 
-export type { Filter, FilterType };
+type CatInfo = {
+  id: string;
+  url: string;
+};
+
+export type { CatInfo, Filter, FilterType };
