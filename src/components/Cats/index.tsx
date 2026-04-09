@@ -3,28 +3,41 @@ import { useCats } from '@/hooks/useCats';
 import { CurrentFilterContext } from '@/stores/CurrentFilterContext';
 import type { CatInfo } from '@/types';
 import { useContext } from 'react';
+import InfiniteScroll from 'react-infinite-scroll-component';
 import { useReadLocalStorage } from 'usehooks-ts';
 import './Cats.css';
 
 function Cats() {
-  const { cats, isFetching } = useCats();
+  const { data, fetchNextPage, hasNextPage, isLoading } = useCats();
 
   const favoriteCats = useReadLocalStorage<CatInfo[]>('favoriteCats');
 
   const { currentFilter } = useContext(CurrentFilterContext)!;
 
-  const displayedData = currentFilter === 'all' ? cats : favoriteCats;
+  const cats = data?.pages.flat() || [];
 
-  return (
+  return isLoading ? (
+    <p>Идет загрузка данных...</p>
+  ) : currentFilter === 'all' ? (
+    <InfiniteScroll
+      className='container cats'
+      dataLength={cats.length}
+      hasMore={hasNextPage}
+      loader={<p>Идет поиск новых котят...</p>}
+      next={fetchNextPage}
+    >
+      {cats.map(cat => (
+        <CatCard catInfo={cat} key={cat.id} />
+      ))}
+    </InfiniteScroll>
+  ) : favoriteCats && favoriteCats.length ? (
     <div className='container cats'>
-      {isFetching ? (
-        <p>Идет загрузка данных...</p>
-      ) : displayedData && displayedData.length ? (
-        displayedData.map(cat => <CatCard catInfo={cat} key={cat.id} />)
-      ) : (
-        <p>Тут нечего показывать :(</p>
-      )}
+      {favoriteCats.map(cat => (
+        <CatCard catInfo={cat} key={cat.id} />
+      ))}
     </div>
+  ) : (
+    <p>Тут нечего показывать :(</p>
   );
 }
 
