@@ -21,6 +21,7 @@ function Cats() {
   ) : currentFilter === 'all' ? (
     <InfiniteScroll
       className='cats'
+      style={{ overflow: 'visible' }}
       dataLength={cats.length}
       hasMore={hasNextPage}
       loader={<p>Идет поиск новых котят...</p>}

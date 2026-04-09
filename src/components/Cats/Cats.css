@@ -5,8 +5,6 @@
   place-items: center;
 
   padding-block: 52px;
-
-  overflow-x: visible;
 }
 
 @media (width <= 1024px) {
