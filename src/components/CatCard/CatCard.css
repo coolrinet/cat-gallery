@@ -10,7 +10,7 @@
 }
 
 .cat-card::after {
-  content: "";
+  content: '';
 
   position: absolute;
   inset: 0;
@@ -41,7 +41,7 @@
 
   opacity: 0;
 
-  color: #F24E1E;
+  color: #f24e1e;
   fill: transparent;
 
   transition-duration: var(--transition-duration);
@@ -53,7 +53,9 @@
 
 .cat-card:hover {
   scale: 1.14;
-  box-shadow: 0 6px 5px rgba(0, 0, 0, 0.24), 0 9px 18px rgba(0, 0, 0, 0.18);
+  box-shadow:
+    0 6px 5px rgba(0, 0, 0, 0.24),
+    0 9px 18px rgba(0, 0, 0, 0.18);
 }
 
 .cat-card:hover::after {
@@ -64,14 +66,26 @@
   opacity: 1;
 }
 
-.cat-card__favorite-btn:hover {
-  fill: currentColor;
-}
-
-.cat-card__favorite-btn.favorite:hover {
-  fill: transparent;
-}
-
 .cat-card__favorite-btn:active {
-  color: #FF3A00;
+  color: #ff3a00;
+}
+
+@media (any-hover: hover) {
+  .cat-card__favorite-btn:hover {
+    fill: currentColor;
+  }
+
+  .cat-card__favorite-btn.favorite:hover {
+    fill: transparent;
+  }
+}
+
+@media (any-hover: none) {
+  .cat-card__favorite-btn:active {
+    fill: currentColor;
+  }
+
+  .cat-card__favorite-btn.favorite:active {
+    fill: transparent;
+  }
 }
